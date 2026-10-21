@@ -1,0 +1,40 @@
+# Maven
+**/target/
+**/build/
+**/out/
+**/.mvn/wrapper/maven-wrapper.jar
+
+# IDEs and editors
+.idea/
+**/.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.classpath
+.project
+.settings/
+.factorypath
+.apt_generated/
+.sts4-cache/
+.springBeans
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+!.env.*.example
+#application-local.properties
+#application-local.yml
+#application-local.yaml
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
