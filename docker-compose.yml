@@ -16,25 +16,25 @@ services:
   # ─────────────────────────────────────────
   # MYSQL — Ride Data Storage
   # ─────────────────────────────────────────
-  mysql:
-    image: mysql:8.0
-    container_name: mysql-rideshare
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: ride_db
-    ports:
-      - "3306:3306"
-    volumes:
-      - mysql-data:/var/lib/mysql
-    networks:
-      - rideshare-network
+#  mysql:
+#    image: mysql:8.0
+#    container_name: mysql-rideshare
+#    environment:
+#      MYSQL_ROOT_PASSWORD: admin
+#      MYSQL_DATABASE: uberapp
+#    ports:
+#      - "3306:3306"
+#    volumes:
+#      - mysql-data:/var/lib/mysql
+#    networks:
+#      - rideshare-network
 
   # ─────────────────────────────────────────
   # ZOOKEEPER — Required by Kafka
   # ─────────────────────────────────────────
   zookeeper:
     image: confluentinc/cp-zookeeper:7.4.0
-    container_name: zookeeper
+    container_name: zookeeper-uber
     ports:
       - "2181:2181"
     environment:
@@ -48,7 +48,7 @@ services:
   # ─────────────────────────────────────────
   kafka:
     image: confluentinc/cp-kafka:7.4.0
-    container_name: kafka
+    container_name: kafka-uber
     depends_on:
       - zookeeper
     ports:
